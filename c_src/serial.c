@@ -504,7 +504,7 @@ int main(int argc, char *argv[])
 
 	    FD_CLR(ttyfd,&readfds);
 
-	    nr_read = read(ttyfd,buf,MAXLENGTH);
+	    nr_read = read(ttyfd,buf,1);
 
 	    if (nr_read <= 0)
 	      {
