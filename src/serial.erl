@@ -35,7 +35,7 @@
 priv_dir() ->
     case code:priv_dir(serial) of
 	{error, bad_name} ->
-	    "./priv";
+	    "./erlang-serial/priv";
 	D ->
 	    D
     end.
