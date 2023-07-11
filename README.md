@@ -5,6 +5,22 @@ originally written by Johan Bevemyr in 1996 and sporadically
 maintained by Tony Garnock-Jones from 2007 onwards.
 
 ## Installation
+Rebar:
+1. Standalone (which isn't very useful):
+   1. clone the repository.
+   2. run `rebar3 compile`.
+2. Part of a project:
+   1. Add the following to the deps in `rebar.config` file:
+   ```erlang
+   {deps, [
+     ..
+     {serial, {git, "https://github.com/EliasA5/erlang-serial.git", {branch, "master"}}},
+   ]}.
+   ```
+   2. compile your project!
+   3. to update to the latest commit use `rebar3 upgrade serial`.
+   
+Old Way:
 
 This library is designed to run as an Erlang library, not an application
 dependency. To install this library, clone the library to a location of your
